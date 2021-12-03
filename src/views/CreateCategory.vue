@@ -2,6 +2,7 @@
 	<div>
 		<div class="container mx-auto mt-6">
 			<div
+				class="px-4"
 			>
 				<div>
 					<label for="category-name" class="label-class">

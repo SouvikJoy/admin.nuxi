@@ -14,7 +14,7 @@
 			<div>
 				<div class="grid md:grid-cols-2 gap-4">
 					<div>
-						<label for="name">Name</label>
+						<label for="name" class="title">Name</label>
 						<Field
 							id="name"
 							name="name"
@@ -29,7 +29,7 @@
 					</div>
 
 					<div>
-						<label for="email">Email</label>
+						<label for="email" class="title">Email</label>
 						<Field
 							id="email"
 							name="email"
@@ -46,7 +46,7 @@
 
 				<div class="grid md:grid-cols-2 py-4 gap-4">
 					<div>
-						<label for="telephone">Telephone</label>
+						<label for="telephone" class="title">Telephone</label>
 						<Field
 							id="telephone"
 							name="telephone"
@@ -64,7 +64,7 @@
 					</div>
 
 					<div>
-						<label for="cellphone">Cellphone</label>
+						<label for="cellphone" class="title">Cellphone</label>
 						<Field
 							id="cellphone"
 							name="cellphone"
@@ -83,7 +83,7 @@
 				</div>
 
 				<div>
-					<label for="address">Address</label>
+					<label for="address" class="title">Address</label>
 					<Field
 						id="address"
 						name="address"
@@ -98,7 +98,7 @@
 				</div>
 
 				<div class="py-4">
-					<label for="brief">Brief</label>
+					<label for="brief" class="title">Brief</label>
 					<Field
 						id="brief"
 						name="brief"
@@ -113,7 +113,7 @@
 				</div>
 
 				<div>
-					<label for="description">Description</label>
+					<label for="description" class="title">Description</label>
 					<Field
 						as="textarea"
 						name="description"
@@ -130,7 +130,7 @@
 					/>
 				</div>
 
-				<label for="background-image">Landing Page Image</label>
+				<label for="background-image" class="title">Landing Page Image</label>
 				<div class="flex justify-center my-6">
 					<BackgroundImage v-model:path="app_landing_image_url" @upload="updateSiteInfo" />
 				</div>

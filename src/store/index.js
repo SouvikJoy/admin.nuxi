@@ -33,17 +33,19 @@ export default createStore({
           email: form.email,
           password: form.password,
         });
-        if (error) throw error;
-        createToast('Login Success',
-            {
-              type: 'success',
-              transition: 'slide',
-              showIcon: 'true',
-              hideProgressBar: 'true',
-            });
 
-        await router.go();
+          createToast('Login Success',
+              {
+                  type: 'success',
+                  transition: 'slide',
+                  showIcon: 'true',
+                  hideProgressBar: 'true',
+              });
+
+        if (error) throw error;
         commit('SET_USER', user);
+
+          await router.go();
       } catch (error) {
         createToast('Login Failed',
             {

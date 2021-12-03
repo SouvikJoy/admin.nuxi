@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "Nexa";
+    font-weight: 300;
+    src: url("../../assets/fonts/nexa/Nexa-Light.eot"); /* IE9*/
+    src: url("../../assets/fonts/nexa/Nexa-Light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../../assets/fonts/nexa/Nexa-Light.woff") format("woff"),
+    url("../../assets/fonts/nexa/Nexa-Light.otf") format("opentype"),
+    url("../../assets/fonts/nexa/Nexa-Light.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Nexa";
+    font-weight: normal;
+    src: url("../../assets/fonts/nexa/Nexa-Regular.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Nexa";
+    font-weight: bold;
+    src: url("../../assets/fonts/nexa/Nexa-Bold.eot"); /* IE9*/
+    src: url("../../assets/fonts/nexa/Nexa-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../../assets/fonts/nexa/Nexa-Bold.woff") format("woff"),
+    url("../../assets/fonts/nexa/Nexa-Bold.otf") format("opentype"),
+    url("../../assets/fonts/nexa/Nexa-Bold.ttf") format("truetype");
+  }
+
+  *:not(.brand-text) {
+    font-family: 'Exo 2', 'Nexa', 'system-ui', '-apple-system', '.AppleSystemUIFont', 'BlinkMacSystemFont', sans-serif;
+  }
+
+  .brand-text {
+    font-family: 'Nexa', 'Exo 2', 'system-ui', '-apple-system', '.AppleSystemUIFont', 'BlinkMacSystemFont', sans-serif;
+    text-transform: lowercase;
+    letter-spacing: 0.007em;
+  }
+}
+
+
+
 .file-upload {
   @apply
   relative
@@ -28,7 +68,7 @@
   rounded-md
 }
 .label-class {
-  @apply font-bold text-2xl
+  @apply mx-4 text-sm font-bold mb-2
 }
 .input-class {
   @apply border-0 px-3 py-3 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 my-2;
@@ -43,8 +83,25 @@
   @apply px-4 py-2 bg-indigo-400 rounded-lg font-bold text-blue-50
 }
 .danger-button {
-  @apply px-4 py-2 bg-red-800 rounded-lg font-bold text-blue-50
+  @apply px-4 py-2 bg-red-600 rounded-lg font-bold text-blue-50
 }
 .tab-area {
   @apply text-center
+}
+
+.title {
+  @apply mx-4 text-sm font-bold mb-2
+ }
+#app {
+  overflow-x:hidden;
+  background-color: rgba(119, 136, 153, 0.15);
+}
+.auth-form-input {
+  @apply border-0 px-3 py-3 mb-0 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150;
+}
+.btn-morgan {
+  @apply font-extrabold uppercase px-6 py-3 mr-1 mb-1 w-full rounded shadow hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150;
+  background: rgb(0,115,251);
+  background: linear-gradient(80deg, rgba(0,115,251,1) 0%, rgba(1,218,236,1) 100%);
+  color: #2c3e4f;
 }

@@ -37,7 +37,7 @@ export default {
     path: String,
     avatarImage: {
       type: String,
-      default: 'm-5'
+      default: 'w-56'
     }
   },
   emits: ['upload', 'update:path'],

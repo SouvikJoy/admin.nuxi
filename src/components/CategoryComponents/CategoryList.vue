@@ -1,12 +1,26 @@
 <template>
-	<div>
-		<div>{{ category?.name }}</div>
-		<div>{{ category?.description }}</div>
-		<ImageAssistant :image="category?.image" bucket="product-bucket"/>
+	<div class="max-w-md mx-4 mb-4 dark:bg-gray-700 dark:bg-opacity-[25%] rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+		<div class="md:flex">
+			<div class="md:flex-shrink-0">
+				<ImageAssistant :image="category?.image" bucket="product-bucket" :imageClass="'object-cover w-full h-60'"/>
+			</div>
+			<div class="p-4 xl:p-8">
+				<div class="uppercase tracking-wide text-lg font-bold">
+					{{ category?.name }}
+				</div>
+				<p class="mt-2  text-sm xl:text-lg text-[#858685]">
+					{{ category?.description }}
+				</p>
+			</div>
 
-		<router-link :to="`/categories/${category?.id}`" class="create-button">
-			Edit
-		</router-link>
+			<div class="flex justify-end">
+				<router-link :to="`/categories/${category.id}`" class="create-button m-6">
+
+					Edit
+
+				</router-link>
+			</div>
+		</div>
 	</div>
 </template>
 

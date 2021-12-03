@@ -2,6 +2,7 @@
 	<div>
 		<div class="container mx-auto mt-6">
 			<div
+				class="mx-4"
 			>
 
 				<div>

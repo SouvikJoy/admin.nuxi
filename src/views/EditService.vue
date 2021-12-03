@@ -2,7 +2,7 @@
 	<div>
 		<div>
 			<div v-for="(service, index) in data" :key="index">
-				<div class="grid place-items-center min-h-screen">
+				<div class="grid place-items-center">
 					<Form
 						ref="formRef"
 						v-slot="{ errors }"
@@ -16,7 +16,7 @@
 
 						<div>
 							<div>
-								<label for="name">Name</label>
+								<label for="name" class="title">Name</label>
 								<Field
 									name="name"
 									v-model="name"
@@ -31,7 +31,7 @@
 
 
 							<div>
-								<label for="description">Description</label>
+								<label for="description" class="title">Description</label>
 								<Field
 									as="textarea"
 									name="description"

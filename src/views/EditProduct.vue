@@ -2,7 +2,7 @@
 	<div>
 		<div>
 			<div v-for="(product, index) in data" :key="index">
-				<div class="grid place-items-center min-h-screen">
+				<div class="grid place-items-center">
 					<Form
 						ref="formRef"
 						v-slot="{ errors }"
@@ -10,13 +10,13 @@
 						@submit="updateProduct"
 					>
 						<div class="flex justify-center my-6">
-							<Logo v-model:path="image" @upload="updateProduct" />
+							<Logo v-model:path="image" @upload="updateProduct" :avatarImage="'w-56'"/>
 						</div>
 
 
 						<div>
 							<div>
-								<label for="name">Name</label>
+								<label for="name" class="title">Name</label>
 								<Field
 									name="name"
 									v-model="name"
@@ -30,7 +30,7 @@
 							</div>
 
 							<div>
-								<label for="product-category" class="label-class">
+								<label for="product-category" class="title">
 									Product Category
 								</label>
 								<select
@@ -51,7 +51,7 @@
 							</div>
 
 							<div>
-								<label for="price">Price</label>
+								<label for="price" class="title">Price</label>
 								<Field
 									name="price"
 									v-model="price"
@@ -65,7 +65,7 @@
 							</div>
 
 							<div>
-								<label for="description">Description</label>
+								<label for="description" class="title">Description</label>
 								<Field
 									as="textarea"
 									name="description"
@@ -83,7 +83,7 @@
 							</div>
 
 							<div>
-								<label for="brief">Brief</label>
+								<label for="brief" class="title">Brief</label>
 								<Field
 									as="textarea"
 									name="brief"

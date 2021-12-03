@@ -1,5 +1,5 @@
 <template>
-	<div class="mx-6">
+	<div>
 		<div class="title">Category List</div>
 		<div class="flex flex-col">
 			<div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">

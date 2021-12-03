@@ -17,7 +17,7 @@ export default {
     bucket: String,
     imageClass: {
       type: String,
-      default: 'w-60 h-60'
+      default: 'w-32 h-32'
     }
   },
   setup(props) {

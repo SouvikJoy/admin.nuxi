@@ -1,7 +1,9 @@
 <template>
 	<div>
 		<div>
-			<button @click="$router.push('/create-category')" class="create-button">Create</button>
+			<div class="flex justify-end">
+				<button @click="$router.push('/create-category')" class="create-button m-6">Create</button>
+			</div>
 			<div v-for="(category, index) in data" :key="index">
 				<CategoryList :category="category" />
 			</div>

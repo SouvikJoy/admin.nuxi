@@ -1,23 +1,23 @@
 <template>
-	<form class="form-widget" @submit.prevent="updateProfile">
-		<logo v-model:path="avatar_url" @upload="updateProfile" />
+	<form class="grid place-items-center mt-6" @submit.prevent="updateProfile">
+		<logo v-model:path="avatar_url" @upload="updateProfile" :avatarImage="'rounded-full w-40'"/>
 		<div>
-			<label for="email">Email</label>
-			<input id="email" type="text" :value="auth.user.email" disabled />
+			<label class="label-class" for="email">Email</label>
+			<input class="input-class" id="email" type="text" :value="auth.user.email" disabled />
 		</div>
 		<div>
-			<label for="username">Name</label>
-			<input id="username" type="text" v-model="username" />
+			<label class="label-class" for="username">Name</label>
+			<input class="input-class" id="username" type="text" v-model="username" />
 		</div>
 		<div>
-			<label for="website">Website</label>
-			<input id="website" type="text" v-model="website" />
+			<label class="label-class" for="website">Designation</label>
+			<input class="input-class" id="website" type="text" v-model="website" />
 		</div>
 
 		<div>
 			<input
 				type="submit"
-				class="button block primary"
+				class="create-button"
 				:value="loading ? 'Loading ...' : 'Update'"
 				:disabled="loading"
 			/>

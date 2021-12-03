@@ -1,13 +1,23 @@
 <template>
-	<div>
+	<div class="container mx-auto">
 
-		<Subscribers />
+		<div class="my-4">
+			<Subscribers />
+		</div>
 
-		<ProductTable />
+		<div class="my-4">
+			<ProductTable />
+		</div>
 
-		<CategoryTable />
+		<div class=my-4>
+			<CategoryTable />
+		</div>
 
-		<ServiceTable />
+		<div class="my-4">
+			<ServiceTable />
+		</div>
+
+
 	</div>
 </template>
 

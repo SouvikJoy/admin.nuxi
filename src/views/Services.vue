@@ -2,7 +2,9 @@
 	<div>
 		<Header />
 		<div>
-			<button @click="$router.push('/create-service')" class="create-button">Create</button>
+			<div class="flex justify-end">
+				<button @click="$router.push('/create-service')" class="create-button m-6">Create</button>
+			</div>
 			<div v-for="(service, index) in data" :key="index">
 
 

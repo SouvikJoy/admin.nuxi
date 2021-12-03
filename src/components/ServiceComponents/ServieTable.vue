@@ -1,5 +1,5 @@
 <template>
-	<div class="mx-6">
+	<div class="md:mx-6">
 		<div class="title">Service List</div>
 		<div class="flex flex-col">
 			<div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -44,9 +44,6 @@
 											<div class="ml-4">
 												<div class="text-sm font-medium text-gray-900">
 													{{ service?.name }}
-												</div>
-												<div class="text-sm text-gray-500">
-													{{ service?.description }}
 												</div>
 											</div>
 										</div>
