@@ -37,7 +37,7 @@
 									<router-link :to="{ name: 'Profile' }" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">Your Profile</router-link>
 								</MenuItem>
 								<MenuItem v-slot="{ active }">
-									<a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">Settings</a>
+									<router-link :to="{ name: 'SiteInfo' }" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">App Settings</router-link>
 								</MenuItem>
 								<MenuItem v-slot="{ active }">
 									<button @click.prevent="signOut" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">Sign out</button>
