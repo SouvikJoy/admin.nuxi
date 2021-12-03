@@ -34,13 +34,15 @@ export default createStore({
           password: form.password,
         });
 
-          createToast('Login Success',
-              {
-                  type: 'success',
-                  transition: 'slide',
-                  showIcon: 'true',
-                  hideProgressBar: 'true',
-              });
+          if (!error) {
+              createToast('Login Success',
+                  {
+                      type: 'success',
+                      transition: 'slide',
+                      showIcon: 'true',
+                      hideProgressBar: 'true',
+                  });
+          }
 
         if (error) throw error;
         commit('SET_USER', user);

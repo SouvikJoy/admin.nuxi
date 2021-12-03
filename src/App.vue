@@ -1,7 +1,7 @@
 <template>
-	<div v-if="auth.user" class="md:grid grid-cols-7 justify-between min-h-screen">
+	<div v-if="auth.user" class="md:grid md:grid-cols-6 justify-between min-h-screen">
 		<SlideOver class="md:block hidden" />
-		<div class="col-span-6">
+		<div class="md:col-span-5">
 			<Header />
 			<router-view />
 		</div>

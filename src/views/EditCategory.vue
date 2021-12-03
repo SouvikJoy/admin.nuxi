@@ -1,65 +1,61 @@
 <template>
-	<div>
-		<div>
-			<div v-for="(category, index) in data" :key="index">
-				<div class="grid place-items-center">
-					<Form
-						ref="formRef"
-						v-slot="{ errors }"
-						class="form-widget"
-						@submit="updateCategory"
-					>
-						<div class="flex justify-center my-6">
-							<Logo v-model:path="image" @upload="updateCategory" />
-						</div>
-
-
-						<div>
-							<div>
-								<label for="name" class="title">Name</label>
-								<Field
-									name="name"
-									v-model="name"
-									type="text"
-									class="input-class"
-									:class="fieldClasses(!!errors.name)"
-									rules="required"
-								/>
-
-								<ErrorMessage class="text-xs text-red-600 font-bold tracking-wider" name="name" />
-							</div>
-
-
-							<div>
-								<label for="description" class="title">Description</label>
-								<Field
-									as="textarea"
-									name="description"
-									v-model="description"
-									:class="fieldClasses(!!errors.description)"
-									rows="6"
-									class="input-class"
-									rules="required|max:180"
-								/>
-
-								<ErrorMessage
-									class="text-xs text-red-600 font-bold tracking-wider"
-									name="description"
-								/>
-							</div>
-						</div>
-
-						<div>
-							<input
-								type="submit"
-								class="create-button"
-							/>
-
-							<button class="danger-button mx-4" @click="deleteCategory">Delete</button>
-						</div>
-					</Form>
+	<div v-for="(category, index) in data" :key="index">
+		<div class="flex justify-center min-h-screen">
+			<Form
+				ref="formRef"
+				v-slot="{ errors }"
+				class="form-widget"
+				@submit="updateCategory"
+			>
+				<div class="flex justify-center my-6">
+					<Logo v-model:path="image" @upload="updateCategory" />
 				</div>
-			</div>
+
+
+				<div>
+					<div>
+						<label for="name" class="title">Name</label>
+						<Field
+							name="name"
+							v-model="name"
+							type="text"
+							class="input-class"
+							:class="fieldClasses(!!errors.name)"
+							rules="required"
+						/>
+
+						<ErrorMessage class="text-xs text-red-600 font-bold tracking-wider" name="name" />
+					</div>
+
+
+					<div>
+						<label for="description" class="title">Description</label>
+						<Field
+							as="textarea"
+							name="description"
+							v-model="description"
+							:class="fieldClasses(!!errors.description)"
+							rows="6"
+							class="input-class"
+							rules="required|max:180"
+						/>
+
+						<ErrorMessage
+							class="text-xs text-red-600 font-bold tracking-wider"
+							name="description"
+						/>
+					</div>
+				</div>
+
+				<div>
+					<input
+						type="submit"
+						class="create-button"
+					/>
+
+					<button class="danger-button mx-4" @click="deleteCategory">Delete</button>
+				</div>
+			</Form>
 		</div>
 	</div>
 </template>

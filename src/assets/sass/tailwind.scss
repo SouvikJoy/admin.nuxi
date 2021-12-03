@@ -92,6 +92,9 @@
 .title {
   @apply mx-4 text-sm font-bold mb-2
  }
+html {
+  overflow-x: hidden;
+}
 #app {
   overflow-x:hidden;
   background-color: rgba(119, 136, 153, 0.15);
@@ -104,4 +107,8 @@
   background: rgb(0,115,251);
   background: linear-gradient(80deg, rgba(0,115,251,1) 0%, rgba(1,218,236,1) 100%);
   color: #2c3e4f;
+}
+
+.wrapper {
+  overflow-x: hidden;
 }
