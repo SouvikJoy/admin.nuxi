@@ -16,8 +16,8 @@
 import useClient from '@/hooks/sb-hooks';
 import { auth } from '@/auth';
 import SignIn from '@/views/SignIn';
-import Header from '../components/Common/Header';
-import SlideOver from '../components/Common/SlideOver';
+import Header from '@/components/Common/Header';
+import SlideOver from '@/components/Common/SlideOver';
 
 const supabase = useClient();
 

@@ -29,7 +29,7 @@
 import useClient from '@/hooks/sb-hooks';
 import { auth } from '@/auth';
 import { onMounted, ref } from 'vue';
-import Logo from '../../components/Logo';
+import Logo from '@/components/Logo';
 
 const supabase = useClient();
 

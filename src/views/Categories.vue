@@ -12,7 +12,7 @@
 <script>
 import {defineComponent} from 'vue';
 import useQuery from '@/hooks/sb-hooks-select';
-import CategoryList from '../../components/CategoryComponents/CategoryList';
+import CategoryList from '@/components/CategoryComponents/CategoryList';
 export default defineComponent({
   name: 'Categories',
   components: {CategoryList},

@@ -16,7 +16,7 @@
 <script>
 import {defineComponent} from 'vue';
 import useQuery from '@/hooks/sb-hooks-select';
-import ServiceList from '../../components/ServiceComponents/ServiceList';
+import ServiceList from '@/components/ServiceComponents/ServiceList';
 export default defineComponent({
   name: 'Services',
   components: {ServiceList},

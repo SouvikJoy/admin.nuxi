@@ -11,7 +11,7 @@
 
 <script>
 import {defineComponent} from 'vue';
-import ProductList from '../../components/ProductsComponents/ProductList';
+import ProductList from '@/components/ProductsComponents/ProductList';
 import useQuery from '@/hooks/sb-hooks-select';
 export default defineComponent({
   name: 'Products',

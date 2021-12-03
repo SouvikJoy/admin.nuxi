@@ -1,6 +1,6 @@
 <template>
-	<div class="md:mx-6">
-		<div class="title">Product List</div>
+	<div class="mx-6">
+		<div class="title">Category List</div>
 		<div class="flex flex-col">
 			<div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
 				<div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -35,18 +35,18 @@
 								</tr>
 							</thead>
 							<tbody class="bg-white divide-y divide-gray-200">
-								<tr v-for="(product, index) in data" :key="index">
+								<tr v-for="(category, index) in data" :key="index">
 									<td class="px-6 py-4 whitespace-nowrap">
 										<div class="flex items-center">
 											<div class="flex-shrink-0 h-10 w-10">
-												<ImageAssistant :image="product?.image" bucket="product-bucket" :imageClass="'w-24'" />
+												<ImageAssistant :image="category?.image" bucket="product-bucket" :imageClass="'w-24'"/>
 											</div>
 											<div class="ml-4">
 												<div class="text-sm font-medium text-gray-900">
-													{{ product?.name }}
+													{{ category?.name }}
 												</div>
 												<div class="text-sm text-gray-500">
-													{{ product?.category }}
+													{{ category?.description }}
 												</div>
 											</div>
 										</div>
@@ -60,7 +60,7 @@
                       font-medium
                     "
 									>
-										<router-link :to="`/products/${product.id}`" class="create-button">
+										<router-link :to="`/categories/${category.id}`" class="create-button">
 
 											Edit
 
@@ -82,12 +82,12 @@ import ImageAssistant from '../ImageAssistant';
 import useQuery from '@/hooks/sb-hooks-select';
 
 export default defineComponent({
-  name: 'ProductTable',
+  name: 'CategoryTable',
   components: {ImageAssistant},
-  props: ['product'],
+  props: ['category'],
   setup() {
     const { loading, error, data, doQuery } = useQuery(
-        'products',
+        'categories',
         undefined,
         true
     );
@@ -107,6 +107,6 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style>
 
 </style>

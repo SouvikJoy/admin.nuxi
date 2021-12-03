@@ -154,8 +154,8 @@ import { onMounted, ref } from 'vue';
 import { Field, Form, ErrorMessage } from 'vee-validate';
 import { initRule } from '@/utils';
 import {createToast} from 'mosha-vue-toastify';
-import Logo from '../../components/Logo';
-import BackgroundImage from '../../components/BackgroundImage';
+import Logo from '@/components/Logo';
+import BackgroundImage from '@/components/BackgroundImage';
 export default {
   name: 'SiteInfo',
   components: {

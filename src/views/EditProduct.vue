@@ -122,7 +122,7 @@ import useDeleteById from '../hooks/sb-hooks-delete-one';
 
 import {computed, defineComponent, onMounted, ref} from 'vue';
 import { useRouter } from 'vue-router';
-import Logo from '../../components/Logo';
+import Logo from '@/components/Logo';
 import {ErrorMessage, Field, Form} from 'vee-validate';
 import {initRule} from '@/utils';
 import useClient from '@/hooks/sb-hooks';

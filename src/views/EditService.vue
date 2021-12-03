@@ -75,7 +75,7 @@ import { useRouter } from 'vue-router';
 import useClient from '@/hooks/sb-hooks';
 import {createToast} from 'mosha-vue-toastify';
 import {initRule} from '@/utils';
-import Logo from '../../components/Logo';
+import Logo from '@/components/Logo';
 
 
 export default defineComponent({

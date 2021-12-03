@@ -13,12 +13,12 @@
 
 <script>
 import {computed, defineComponent} from 'vue';
-import SlideOver from '../../components/Common/SlideOver';
+import SlideOver from '@/components/Common/SlideOver';
 import {useStore} from 'vuex';
-import ProductTable from '../../components/ProductsComponents/ProductTable';
-import CategoryTable from '../../components/CategoryComponents/CategoryTable';
-import ServiceTable from '../../components/ServiceComponents/ServieTable';
-import Subscribers from '../../components/partial/Subscribers';
+import ProductTable from '@/components/ProductsComponents/ProductTable';
+import CategoryTable from '@/components/CategoryComponents/CategoryTable';
+import ServiceTable from '@/components/ServiceComponents/ServieTable';
+import Subscribers from '@/components/partial/Subscribers';
 
 export default defineComponent({
   name: 'Dashboard',
